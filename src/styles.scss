@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.notification.mat-badge-medium span{
+    width: 8px !important;
+    height: 8px !important;
+    line-height: 8px !important;
+    color: #f44336 !important;
+    border: 2px solid #1ABBCD !important;
+    top: 0 !important;
+    right: 0 !important;
+}

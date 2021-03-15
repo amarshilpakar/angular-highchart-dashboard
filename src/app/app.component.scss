@@ -1,0 +1,106 @@
+.dashboard-header {
+    background: #1ABBCD;
+    height: 268px;
+}
+
+mat-grid-tile {
+    background: lightblue;
+}
+
+.dashboard-container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 40px;
+    margin-top: -220px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.text-white {
+    color: white;
+}
+
+.user-info {
+    label {
+        font-weight: 500;
+        padding-right: 10px;
+    }
+}
+
+.profile-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0px 20px;
+    background-position: center;
+    background-image: url('../assets/profile.jpg');
+}
+
+.menu-item {
+    display: inline-block;
+    padding: 10px 25px;
+    color: white;
+    font-size: 16px;
+    border-radius: 50px;
+    
+}
+
+.menu-item.active {
+    background: #48C9D7;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #16A5B5;
+    padding: 15px;
+    border-radius: 10px;
+    mat-icon {
+        color: #91D5DC;
+    }
+    input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: #16A5B5;
+        color: #91D5DC;
+        font-size: 16px;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #91D5DC;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: #91D5DC;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: #91D5DC;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: #91D5DC;
+      }
+}
+
+.area-chart-card, .notification-card, .line-chart-card {
+    margin: 0.75rem;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.view-more {
+    color: #1ABBCD;
+}
+

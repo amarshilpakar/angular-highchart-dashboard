@@ -1,1 +1,192 @@
-<h1>Hello {{name}} by Amar!</h1>
+<mat-drawer-container [hasBackdrop]="true" fullscreen>
+    <mat-drawer #drawer [mode]="'over'">
+        <mat-list style="min-width: 250px;">
+            <mat-list-item> Menu </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item> Dashboard </mat-list-item>
+            <mat-list-item> Tutoring Schedule </mat-list-item>
+            <mat-list-item> Lessons </mat-list-item>
+            <mat-list-item> My Classes </mat-list-item>
+            <mat-list-item> Analytics </mat-list-item>
+           </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="dashboard-header">
+            <!-- <button *ngIf="showSidenav" mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button> -->
+        </div>
+        <div class="dashboard-container">
+            <div class="d-flex align-center justify-between" style="margin:0 1.5rem">
+                <div>
+                    <img src="assets\demo-logo.png" style="max-width: 150px;" />
+                </div>
+                <div class="user-info d-flex align-center">
+                    <mat-icon matBadge="0" matBadgeColor="warn" class="text-white notification">notifications</mat-icon>
+                    <div class="profile-icon">
+                        <!-- <img src="assets\profile.jpg" class="profile-img" style="max-width: 100px;"/> -->
+                    </div>
+                    <label class="text-white"> Username </label>
+                    <mat-icon class="text-white">expand_more</mat-icon>
+                </div>
+            </div>
+            <div>
+                <div class="content" fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 20px 0;" style="margin:0 1.5rem">
+                    <div *ngIf="!showSidenav" fxFlex="70" fxLayout="row" fxLayoutAlign="start center">
+                        <div class="menu-item active">
+                            <label>Dasboard</label>
+                        </div>
+                        <div class="menu-item">
+                            <label>Tutoring Schedule</label>
+                        </div>
+                        <div class="menu-item">
+                            <label>Lessons</label>
+                        </div>
+                        <div class="menu-item">
+                            <label>My Classes</label>
+                        </div>
+                        <div class="menu-item">
+                            <label>Analytics</label>
+                        </div>
+                    </div>
+                    <div *ngIf="showSidenav" fxFlex="10">
+                        <button mat-icon-button (click)="drawer.toggle()">
+                            <mat-icon>menu</mat-icon>
+                        </button>
+                    </div>
+
+                    <div fxFlex="30" fxFlex.xs="90" fxFlex.md="90" fxFlex.sm="90">
+                        <div class="search-container">
+                            <mat-icon>search</mat-icon>
+                            <input type="text" name="searchText"
+                                placeholder="Search for lessons, classes and students..." />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutAlign="flex-start" style="margin: 0.75rem;">
+                    <div fxFlex="25" fxFlex.sm="50" fxFlex.xs="100">
+                        <mat-card class="area-chart-card">
+                            <mat-card-content>
+                                <p>
+                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+                                    Japan.
+                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                                    originally
+                                    bred for hunting.
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div fxFlex="25" fxFlex.sm="50" fxFlex.xs="100">
+                        <mat-card class="area-chart-card">
+                            <mat-card-content>
+                                <p>
+                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+                                    Japan.
+                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                                    originally
+                                    bred for hunting.
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div fxFlex="25" fxFlex.sm="50" fxFlex.xs="100">
+                        <mat-card class="area-chart-card">
+                            <mat-card-content>
+                                <p>
+                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+                                    Japan.
+                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                                    originally
+                                    bred for hunting.
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div fxFlex="25" fxFlex.sm="50" fxFlex.xs="100">
+                        <mat-card class="area-chart-card">
+                            <mat-card-content>
+                                <p>
+                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+                                    Japan.
+                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                                    originally
+                                    bred for hunting.
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutAlign="flex-start" style="margin: 3rem 0.75rem;">
+                    <div fxFlex="50" fxFlex.xs="100">
+                        <div class="d-flex align-center justify-between" style="margin: 0.75rem;">
+                            <label class="title">Classes Analytics</label>
+                            <label class="view-more">View More</label>
+                        </div>
+                        <mat-card class="line-chart-card">
+                            <mat-card-content>
+                                <p>
+                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+                                    Japan.
+                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                                    originally
+                                    bred for hunting.
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div fxFlex="50" fxFlex.xs="100">
+                        <div class="d-flex align-center justify-between" style="margin: 0.75rem;">
+                            <label class="title">Notifications</label>
+                        </div>
+                        <mat-card class="notification-card">
+                            <mat-card-content>
+                                <p>
+                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+                                    Japan.
+                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                                    originally
+                                    bred for hunting.
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutAlign="flex-start" style="margin: 0 0.75rem;">
+                    <div fxFlex="100">
+                        <div class="d-flex align-center justify-between" style="margin: 0.75rem;">
+                            <label class="title">Marketing Analytics</label>
+                            <label class="view-more">View More</label>
+                        </div>
+                        <mat-card class="line-chart-card">
+                            <mat-card-content>
+                                <p>
+                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+                                    Japan.
+                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                                    originally
+                                    bred for hunting.
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                        <mat-card class="line-chart-card">
+                            <mat-card-content>
+                                <p>
+                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+                                    Japan.
+                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                                    originally
+                                    bred for hunting.
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
