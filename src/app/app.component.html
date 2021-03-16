@@ -30,7 +30,7 @@
             </div>
             <div>
                 <div class="content" fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 20px 0;" style="margin:0 1.5rem">
-                    <div *ngIf="!showSidenav" fxFlex="70" fxLayout="row" fxLayoutAlign="start center">
+                    <div *ngIf="!showSidenav" fxFlex="70" fxFlex.md="60" fxLayout="row" fxLayoutAlign="start center">
                         <div class="menu-item active">
                             <label>Dasboard</label>
                         </div>
@@ -53,7 +53,7 @@
                         </button>
                     </div>
 
-                    <div fxFlex="30" fxFlex.xs="90" fxFlex.md="90" fxFlex.sm="90">
+                    <div fxFlex="30" fxFlex.xs="90" fxFlex.md="40" fxFlex.sm="90">
                         <div class="search-container">
                             <mat-icon>search</mat-icon>
                             <input type="text" name="searchText"
@@ -67,52 +67,92 @@
                     <div fxFlex="25" fxFlex.sm="50" fxFlex.xs="100">
                         <mat-card class="area-chart-card">
                             <mat-card-content>
-                                <p>
-                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
-                                    Japan.
-                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-                                    originally
-                                    bred for hunting.
-                                </p>
+                                <div class="raise">
+                                    <mat-icon>call_made</mat-icon><span>56.1%</span>
+                                </div>
+                                <div [chart]="chart1"></div>
+                                <div class="total-count" fxLayout="row">
+                                    <div>
+                                        <mat-icon class="title-icon color-red">live_tv</mat-icon>
+                                    </div>
+                                    <div fxLayout="column">
+                                        <div class="count-title">
+                                            TOTAL LESSONS
+                                        </div>
+                                        <div class="count-number">
+                                            564
+                                        </div>
+                                    </div>
+                                </div>
                             </mat-card-content>
                         </mat-card>
                     </div>
                     <div fxFlex="25" fxFlex.sm="50" fxFlex.xs="100">
                         <mat-card class="area-chart-card">
                             <mat-card-content>
-                                <p>
-                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
-                                    Japan.
-                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-                                    originally
-                                    bred for hunting.
-                                </p>
+                                <div class="fall">
+                                    <mat-icon>call_made</mat-icon><span>-8.33%</span>
+                                </div>
+                                <div [chart]="chart2"></div>
+                                <div class="total-count" fxLayout="row">
+                                    <div>
+                                        <mat-icon class="title-icon color-yellow">book</mat-icon>
+                                    </div>
+                                    <div fxLayout="column">
+                                        <div class="count-title">
+                                            TOTAL COURSE
+                                        </div>
+                                        <div class="count-number">
+                                            256
+                                        </div>
+                                    </div>
+                                </div>
                             </mat-card-content>
                         </mat-card>
                     </div>
                     <div fxFlex="25" fxFlex.sm="50" fxFlex.xs="100">
                         <mat-card class="area-chart-card">
                             <mat-card-content>
-                                <p>
-                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
-                                    Japan.
-                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-                                    originally
-                                    bred for hunting.
-                                </p>
+                                <div class="raise">
+                                    <mat-icon>call_made</mat-icon><span>16.2%</span>
+                                </div>
+                                <div [chart]="chart3"></div>
+                                <div class="total-count" fxLayout="row">
+                                    <div>
+                                        <mat-icon class="title-icon color-green">school</mat-icon>
+                                    </div>
+                                    <div fxLayout="column">
+                                        <div class="count-title">
+                                            TOTAL STUDENTS
+                                        </div>
+                                        <div class="count-number">
+                                            65,465
+                                        </div>
+                                    </div>
+                                </div>
                             </mat-card-content>
                         </mat-card>
                     </div>
                     <div fxFlex="25" fxFlex.sm="50" fxFlex.xs="100">
                         <mat-card class="area-chart-card">
                             <mat-card-content>
-                                <p>
-                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
-                                    Japan.
-                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-                                    originally
-                                    bred for hunting.
-                                </p>
+                                <div class="raise">
+                                    <mat-icon>call_made</mat-icon><span>64.5%</span>
+                                </div>
+                                <div [chart]="chart4"></div>
+                                <div class="total-count" fxLayout="row">
+                                    <div>
+                                        <mat-icon class="title-icon color-blue">equalizer</mat-icon>
+                                    </div>
+                                    <div fxLayout="column">
+                                        <div class="count-title">
+                                            ENGAGEMENT RATE
+                                        </div>
+                                        <div class="count-number">
+                                            56%
+                                        </div>
+                                    </div>
+                                </div>
                             </mat-card-content>
                         </mat-card>
                     </div>
@@ -120,36 +160,50 @@
                 </div>
 
                 <div fxLayout="row wrap" fxLayoutAlign="flex-start" style="margin: 3rem 0.75rem;">
-                    <div fxFlex="50" fxFlex.xs="100">
+                    <div fxFlex="50" fxFlex.xs="100" fxFlex.sm="100">
                         <div class="d-flex align-center justify-between" style="margin: 0.75rem;">
                             <label class="title">Classes Analytics</label>
                             <label class="view-more">View More</label>
                         </div>
                         <mat-card class="line-chart-card">
                             <mat-card-content>
-                                <p>
-                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
-                                    Japan.
-                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-                                    originally
-                                    bred for hunting.
-                                </p>
+                                <div fxLayout="row">
+                                    <div fxLayout="column" fxFlex="30">
+                                        <div class="count-title">
+                                            TOTAL LESSONS
+                                        </div>
+                                        <div class="count-number" style="margin-bottom: 60px;">
+                                            64%
+                                        </div>
+                                        <div class="raise" style="margin: 20px 0;">
+                                            <mat-icon>call_made</mat-icon><span>-8.33%</span>
+                                        </div>
+                                        <div class="count-title">Since last week</div>
+                                    </div>
+                                    <div fxFlex="70" [chart]="line"></div>
+                                </div>
                             </mat-card-content>
                         </mat-card>
                     </div>
-                    <div fxFlex="50" fxFlex.xs="100">
+                    <div fxFlex="50" fxFlex.xs="100" fxFlex.sm="100">
                         <div class="d-flex align-center justify-between" style="margin: 0.75rem;">
                             <label class="title">Notifications</label>
                         </div>
                         <mat-card class="notification-card">
                             <mat-card-content>
-                                <p>
-                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
-                                    Japan.
-                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-                                    originally
-                                    bred for hunting.
-                                </p>
+                                <div fxFlex="60" style="margin-top: 20px;">
+                                    <h3 style="margin: 0;">Hi, <span style="font-weight: bold;">Jhon Doe</span></h3>
+                                    <p>
+                                        You have 50 coins left in your wallet balance. Ypu already completed 562 coins for your marketing portfolio for
+                                        today. You are already doing well Thanks for using Oswald!
+                                    </p>
+                                    <div class="menu-item active" style="margin-top: 30px;">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <mat-icon class="text-white" style="margin-right: 10px;">account_balance_wallet</mat-icon>
+                                            <label>Upgrade wallet</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </mat-card-content>
                         </mat-card>
                     </div>
@@ -162,26 +216,132 @@
                             <label class="title">Marketing Analytics</label>
                             <label class="view-more">View More</label>
                         </div>
-                        <mat-card class="line-chart-card">
+                        <mat-card class="doughnut-card">
                             <mat-card-content>
-                                <p>
-                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
-                                    Japan.
-                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-                                    originally
-                                    bred for hunting.
-                                </p>
+                                <div fxLayout="row wrap" fxLayoutAlign="start center">
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="33" fxFlex.xs="100" class="doughnut-title">Market Portfolio 1</div>
+                                    <mat-divider fxHide fxShow.gt-xs [vertical]="true" style="height: 100px;"></mat-divider>
+                                    <div fxFlex="12" fxFlex.md="20" fxFlex.sm="30" fxFlex.xs="100">
+                                        <div [chart]="doughnut1"></div>
+                                    </div>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="33" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <mat-icon class="text-blue">fiber_manual_record</mat-icon><div class="doughnut-label">Impression</div>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <mat-icon class="text-orange">fiber_manual_record</mat-icon><div class="doughnut-label">Hover</div>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <mat-icon class="text-red">fiber_manual_record</mat-icon><div class="doughnut-label">Click & Submit</div>
+                                        </div>                                       
+                                    </div>
+                                    <mat-divider fxHide fxShow.gt-sm [vertical]="true" style="height: 100px; margin-left: -30px;margin-right: 30px;"></mat-divider>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="count-title">Impression</div><mat-icon style="margin-left: 10px;"  class="text-green">arrow_upward</mat-icon>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="doughnut-title">8,945</div> <div style="margin-left: 15px;" class="doughnut-title text-green">52%</div>
+                                        </div>                                   
+                                    </div>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="count-title">Hover</div><mat-icon style="margin-left: 10px;"  class="text-green">arrow_upward</mat-icon>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="doughnut-title">8,945</div> <div style="margin-left: 15px;" class="doughnut-title text-green">52%</div>
+                                        </div>                                   
+                                    </div>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="count-title">Click</div><mat-icon style="margin-left: 10px;"  class="text-red">arrow_downward</mat-icon>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="doughnut-title">2,988</div> <div style="margin-left: 15px;" class="doughnut-title text-red">52%</div>
+                                        </div>                                   
+                                    </div>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="count-title">Hover & Submit</div><mat-icon style="margin-left: 10px;"  class="text-green">arrow_upward</mat-icon>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="doughnut-title">1,568</div> <div style="margin-left: 15px;" class="doughnut-title text-green">57%</div>
+                                        </div>                                   
+                                    </div>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="count-title">Click & Submit</div><mat-icon style="margin-left: 10px;"  class="text-green">arrow_upward</mat-icon>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="doughnut-title">1,568</div> <div style="margin-left: 15px;" class="doughnut-title text-green">57%</div>
+                                        </div>                                   
+                                    </div>
+
+                                </div>
                             </mat-card-content>
                         </mat-card>
-                        <mat-card class="line-chart-card">
+                        <mat-card class="doughnut-card">
                             <mat-card-content>
-                                <p>
-                                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
-                                    Japan.
-                                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-                                    originally
-                                    bred for hunting.
-                                </p>
+                                <div fxLayout="row wrap" fxLayoutAlign="start center">
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="33" fxFlex.xs="100" class="doughnut-title">Market Portfolio 1</div>
+                                    <mat-divider fxHide fxShow.gt-xs [vertical]="true" style="height: 100px;"></mat-divider>
+                                    <div fxFlex="12" fxFlex.md="20" fxFlex.sm="30" fxFlex.xs="100">
+                                        <div [chart]="doughnut2"></div>
+                                    </div>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="33" fxFlex.xs="100" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <mat-icon class="text-blue">fiber_manual_record</mat-icon><div class="doughnut-label">Impression</div>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <mat-icon class="text-orange">fiber_manual_record</mat-icon><div class="doughnut-label">Hover</div>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <mat-icon class="text-red">fiber_manual_record</mat-icon><div class="doughnut-label">Click & Submit</div>
+                                        </div>                                       
+                                    </div>
+                                    <mat-divider fxHide fxShow.gt-sm [vertical]="true" style="height: 100px; margin-left: -30px;margin-right: 30px;"></mat-divider>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="count-title">Impression</div><mat-icon style="margin-left: 10px;"  class="text-green">arrow_upward</mat-icon>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="doughnut-title">8,945</div> <div style="margin-left: 15px;" class="doughnut-title text-green">52%</div>
+                                        </div>                                   
+                                    </div>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="count-title">Hover</div><mat-icon style="margin-left: 10px;"  class="text-green">arrow_upward</mat-icon>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="doughnut-title">8,945</div> <div style="margin-left: 15px;" class="doughnut-title text-green">52%</div>
+                                        </div>                                   
+                                    </div>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="count-title">Click</div><mat-icon style="margin-left: 10px;"  class="text-red">arrow_downward</mat-icon>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="doughnut-title">2,988</div> <div style="margin-left: 15px;" class="doughnut-title text-red">52%</div>
+                                        </div>                                   
+                                    </div>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="count-title">Hover & Submit</div><mat-icon style="margin-left: 10px;"  class="text-green">arrow_upward</mat-icon>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="doughnut-title">1,568</div> <div style="margin-left: 15px;" class="doughnut-title text-green">57%</div>
+                                        </div>                                   
+                                    </div>
+                                    <div fxFlex="12.5" fxFlex.md="25" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column" fxLayoutAlign="start start">
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="count-title">Click & Submit</div><mat-icon style="margin-left: 10px;"  class="text-green">arrow_upward</mat-icon>
+                                        </div>
+                                        <div fxLayout="row" fxLayoutAlign="start center">
+                                            <div class="doughnut-title">1,568</div> <div style="margin-left: 15px;" class="doughnut-title text-green">57%</div>
+                                        </div>                                   
+                                    </div>
+
+                                </div>
                             </mat-card-content>
                         </mat-card>
                     </div>
